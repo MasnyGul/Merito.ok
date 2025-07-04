@@ -1,0 +1,21 @@
+# Pliki systemowe
+.DS_Store
+Thumbs.db
+
+# Foldery edytorów
+.vscode/
+.idea/
+
+# Pliki logów
+*.log
+
+# Zależności (jeśli używasz npm)
+node_modules/
+
+# Pliki produkcyjne
+dist/
+build/
+
+# Tymczasowe pliki
+*.tmp
+*.swp

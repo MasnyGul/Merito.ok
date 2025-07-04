@@ -1,4 +1,4 @@
-function sayHello(name) {
-  return `Hello, ${name}!`;
+function sayHello(user) {
+  return `Hello, ${user.firstName}!`;
 }
-console.log(sayHello("Anna"));
+console.log(sayHello({ firstName: "Anna" }));

@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+p{
+    font-size: 2rem;
+    margin-top: 100px;
+}
+
+.board{
+    width: 500px;
+    height: 500px;
+    background-color: green;
+    z-index: -2;
+}
+
+
+.grid{
+    position: relative;
+    padding: 5px;
+    display: grid;
+    grid-template-columns:repeat(9, 1fr);
+    grid-template-rows:repeat(9, 1fr);
+    width: 500px;
+    height: 500px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 10px dashed brown;
+    gap: 10px;
+}
+
+.grid >div{
+    background:green;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.snake{
+    grid-area: 5/5;
+    background: yellow !important;
+    position: absolute;
+    z-index: 1 !important;
+    width: calc(390px/9);
+    height: calc(390px/9);
+    transition: 0.5s;
+}
+.snaks{
+    grid-area: 5/5;
+    background: yellow !important;
+    position: absolute;
+    z-index: 1 !important;
+    width: calc(390px/9);
+    height: calc(390px/9);
+    transition: 0.5s;
+}
+
+.apple{
+    width: calc(390px/9);
+    height: calc(390px/9);
+    position: absolute;
+    grid-area: 3/5;
+    background-color: red !important;
+    border-radius: 50%;
+    z-index: 1 !important;
+}
+
+.start{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 50px;
+    background-color: brown;
+    color: white;
+    transition: 0.5s;
+}
+
+.start:hover{
+    background-color: rgb(58, 8, 8);
+}
+
+.pad{
+    margin-top: 50px;
+    transition: 1s;
+    width: 300px;
+    height: 200px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns:repeat(3, 1fr);
+    grid-template-rows:repeat(2, 1fr);
+    transform: rotate(180deg);
+}
+
+.pad>div{
+    border: 2px solid rgb(37, 4, 4);
+    background: brown;
+}
+.pad>div:nth-child(1){
+    grid-area: 2/2;
+}
+
+.pad>div:hover{
+    background:rgb(37, 4, 4);
+}
